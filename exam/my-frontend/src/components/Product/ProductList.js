@@ -45,7 +45,7 @@ const ProductList = () => {
     return (
         <div className="container mt-5">
             <h1 className="mb-4">Products</h1>
-            <Link to="/add-product" className="btn btn-primary mb-3">Add Product</Link>
+            <Link to="/add-product" className="btn btn-primary mb-3">Create</Link>
             <table className="table table-bordered">
                 <thead>
                 <tr>
