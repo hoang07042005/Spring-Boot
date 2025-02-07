@@ -67,7 +67,7 @@ const UpdateProduct = () => {
         try {
             await axios.put(`/products/update/${id}`, updatedProduct);
             alert('Product updated successfully!');
-            navigate('/products');
+            navigate('/');
         } catch (error) {
             console.error('Error updating product:', error);
             setError('An error occurred while updating the product!');
