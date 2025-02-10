@@ -40,7 +40,7 @@ public class SupplierService implements ISupplierService {
         Supplier existingSupplier = supplierRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Supplier not found!"));
 
-        existingSupplier.setName(supplier.getName()); // Chỉnh sửa các trường cần thiết
+        existingSupplier.setName(supplier.getName()); 
         return supplierRepository.save(existingSupplier);
     }
 }

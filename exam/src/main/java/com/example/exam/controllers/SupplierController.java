@@ -34,7 +34,7 @@ public class SupplierController {
 
     @PutMapping("/update/{id}")
     public Supplier updateSupplier(@PathVariable int id, @RequestBody Supplier supplier) {
-        return supplierService.updateSupplier(id, supplier); // Gọi phương thức update
+        return supplierService.updateSupplier(id, supplier);
     }
 
     @DeleteMapping("/delete/{id}")

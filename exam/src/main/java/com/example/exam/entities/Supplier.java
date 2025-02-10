@@ -18,7 +18,7 @@ public class Supplier {
     @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL)
     private List<Product> products;
 
-    // Getters and setters
+    
     public int getId() {
         return id;
     }

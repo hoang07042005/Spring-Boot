@@ -40,7 +40,7 @@ public class CategoryService implements ICategoryService {
         Category existingCategory = categoryRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Category not found!"));
 
-        existingCategory.setName(category.getName()); // Chỉnh sửa các trường cần thiết
+        existingCategory.setName(category.getName());
         return categoryRepository.save(existingCategory);
     }
 }

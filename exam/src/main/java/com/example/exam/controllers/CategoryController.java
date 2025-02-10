@@ -32,7 +32,7 @@ public class CategoryController {
 
     @PutMapping("/update/{id}")
     public Category updateCategory(@PathVariable int id, @RequestBody Category category) {
-        return categoryService.updateCategory(id, category); // Gọi phương thức update
+        return categoryService.updateCategory(id, category); 
     }
 
     @DeleteMapping("/delete/{id}")

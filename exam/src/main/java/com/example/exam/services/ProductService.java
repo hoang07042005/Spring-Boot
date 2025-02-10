@@ -43,7 +43,7 @@ public class ProductService implements IProductService {
         existingProduct.setName(product.getName());
         existingProduct.setPrice(product.getPrice());
         existingProduct.setCategory(product.getCategory());
-        existingProduct.setSupplier(product.getSupplier()); // Cập nhật các trường cần thiết
+        existingProduct.setSupplier(product.getSupplier()); 
 
         return productRepository.save(existingProduct);
     }

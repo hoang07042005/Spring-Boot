@@ -23,7 +23,7 @@ public class Product {
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
 
-    // Getters and setters
+    
     public int getId() {
         return id;
     }

@@ -32,7 +32,7 @@ public class ProductController {
 
     @PutMapping("/update/{id}")
     public Product updateProduct(@PathVariable int id, @RequestBody Product product) {
-        return productService.updateProduct(id, product); // Gọi phương thức update
+        return productService.updateProduct(id, product); 
     }
 
     @DeleteMapping("/delete/{id}")
