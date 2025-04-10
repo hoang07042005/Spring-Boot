@@ -24,17 +24,17 @@ public class EmployeeController {
         return employeeService.getEmployeeById(id);
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public Employee createEmployee(@RequestBody Employee employee) {
         return employeeService.createEmployee(employee);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Employee updateEmployee(@PathVariable Long id, @RequestBody Employee updatedEmployee) {
         return employeeService.updateEmployee(id, updatedEmployee);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteEmployee(@PathVariable Long id) {
         employeeService.deleteEmployee(id);
     }

@@ -2,7 +2,7 @@ package com.example.demo_test.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 import java.util.Date;
 
@@ -18,8 +18,7 @@ public class Project {
     private Date startDate;
     private Date endDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER) // Luôn fetch manager
     @JoinColumn(name = "manager_id")
-    @JsonBackReference
     private Employee manager;
 }

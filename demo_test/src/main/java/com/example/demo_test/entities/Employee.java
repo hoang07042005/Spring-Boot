@@ -4,8 +4,10 @@ import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 
 @Entity
 @Data
@@ -18,12 +20,11 @@ public class Employee {
     private String employeeName;
     private String email;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "department_id")
-    @JsonBackReference
     private Department department;
 
     @OneToMany(mappedBy = "manager", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonManagedReference
+    @JsonIgnore
     private List<Project> projects;
 }

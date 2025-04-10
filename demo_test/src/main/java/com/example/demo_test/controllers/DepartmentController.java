@@ -24,17 +24,17 @@ public class DepartmentController {
         return departmentService.getDepartmentById(id);
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public Department createDepartment(@RequestBody Department department) {
         return departmentService.createDepartment(department);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Department updateDepartment(@PathVariable Long id, @RequestBody Department updatedDepartment) {
         return departmentService.updateDepartment(id, updatedDepartment);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteDepartment(@PathVariable Long id) {
         departmentService.deleteDepartment(id);
     }
